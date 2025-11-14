@@ -8,9 +8,8 @@ The application dynamically loads products, variants, and EMI plans from a **Mon
 
 ## 🚀 Live Demo
 
-🌐 **Frontend + Backend (Monorepo)** → [Render Deployment Link](#)
-💾 **GitHub Repository** → [GitHub Link](#)
-🎥 **Demo Video** → [Google Drive / YouTube Link](#)
+🌐 **Frontend + ** → [Render Deployment Link](https://scaling-parakeet-1.onrender.com/)
+💾 **Backend** → [Render Deployment Link](https://scaling-parakeet-hzew.onrender.com/api)
 
 ---
 
