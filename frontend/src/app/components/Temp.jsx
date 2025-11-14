@@ -1,104 +1,57 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+
+import { useParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
-import toast from "react-hot-toast";
+import { useState } from "react";
 import { fetchProductBySlug } from "@/app/utlis/api";
 
-export default function ProductDetailsPage({ params }) {
-  const router = useRouter();
-  const [slug, setSlug] = useState(null);
-  const [selectedColor, setSelectedColor] = useState("");
-  const [selectedStorage, setSelectedStorage] = useState("");
-  const [selectedImage, setSelectedImage] = useState(null);
+export default function Temp() {
+  const { slug } = useParams();
   const [selectedVariant, setSelectedVariant] = useState(null);
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [selectedEmi, setSelectedEmi] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-  const navigate = (path) => router.push(path);
 
-  useEffect(() => {
-    let mounted = true;
-    const resolveParams = async () => {
-      try {
-        const p = await params;
-        if (!mounted) return;
-        setSlug(p?.slug ?? null);
-      } catch (err) {
-        // swallow or show a toast if needed
-        console.error("Failed to resolve params", err);
-      }
-    };
-    resolveParams();
-    return () => {
-      mounted = false;
-    };
-  }, [params]);
 
-  // ✅ Fetch product with TanStack Query
-  const { data, isLoading, isError } = useQuery({
+  const { data, isLoading, error } = useQuery({
     queryKey: ["product", slug],
     queryFn: () => fetchProductBySlug(slug),
-    enabled: !!slug,
   });
 
-  const product = data?.data || null;
+   const product = data?.data;
 
-  // ✅ Set default variant and storage when data loads
-  useEffect(() => {
-    if (product) {
-      setSelectedColor(product.color || "");
-      if (product.storageOptions?.length > 0) {
-        setSelectedStorage(product.storageOptions[0].size);
-      }
-    }
-  }, [product]);
+   useEffect(() => {
+    if (!searchParams) return;
+    const color = searchParams.get("color");
+    if (!color || !product?.variants) return;
 
-  // Handle color change
- const handleColorSelect = (variantSlug) => {
-  const matchedVariant = product.variants.find((v) => v.slug === variantSlug);
-  if (matchedVariant) {
-    setSelectedColor(matchedVariant.color);
-    setSelectedImage(matchedVariant.image);
-
-    // Update the URL without reloading the page
-    router.replace(`/products/${variantSlug}`, undefined, { shallow: false }, {scroll: false});
-  }
-};
-
-const handleStorageSelect = (storageSlug, storageSize) => {
-  const matchedStorage = product.storageOptions.find(
-    (s) => s.slug === storageSlug
-  );
-  if (matchedStorage) {
-    setSelectedStorage(matchedStorage.storage);
-
-    // Update the URL without reloading the page
-    router.replace(`/products/${storageSlug}`, undefined, { shallow: true },{ scroll: false });
-  }
-};
-
-  if (!slug) return <div className="text-center py-10">Loading...</div>;
+    const matchedVariant = product.variants.find((v) => v.color === color);
+    setSelectedVariant(matchedVariant || null);
+  }, [product?.variants, searchParams?.toString()]);
 
   if (isLoading)
+    return <div className="text-center py-10">Loading product details...</div>;
+  if (error)
     return (
-      <p className="text-center mt-10 text-gray-600">Loading product...</p>
+      <div className="text-center py-10 text-error">
+        Failed to load product: {error.message}
+      </div>
     );
 
-  if (isError || !product)
-    return (
-      <p className="text-center mt-10 text-red-500">
-        Failed to load product details.
-      </p>
-    );
+  const displayItem = selectedVariant || product;
+  const mainImage = selectedImage || displayItem.image;
 
-  const mainImage = selectedImage || product.image;
-
-
-const handleProceedToBuy = () => {
+  const handleProceedToBuy = () => {
+  if (!selectedEmi) {
+    toast.error("Please select an EMI plan before proceeding!");
+    return;
+  }
 
   toast.success(
-    `Purchase simulated! 🎉.`,
+    `Purchase simulated! 🎉 
+    You selected ${selectedEmi.duration} months plan 
+    with ₹${selectedEmi.downPayment} down payment.`,
     {
       duration: 4000,
       style: {
@@ -113,70 +66,80 @@ const handleProceedToBuy = () => {
   setTimeout(() => navigate("/"), 2000);
 };
 
-console.log(product);
-
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="max-w-6xl mx-auto py-6">
       <div className="grid md:grid-cols-2 gap-10">
-        {/* Left: Product Images */}
+        {/* --- Image Section --- */}
         <div>
           <img
-            src={mainImage || product.image}
-            alt={product.name}
+            src={displayItem.image}
+            alt={displayItem.name}
             className="rounded-xl w-full object-contain"
           />
-          <div className="flex gap-2 mt-4 overflow-x-auto">
-            {product.imageGallery.map((img, index) => (
-              <div
-                key={index}
+          <div className="flex gap-3 mt-4 overflow-x-auto">
+            {displayItem.imageGallery?.map((img, idx) => (
+                <div
+                key={idx}
                 className={`w-24 h-24 relative rounded-md overflow-hidden border cursor-pointer transition
                   ${
-                    mainImage === img
+                    mainImage === imgUrl
                       ? "border-primary ring-2 ring-primary"
                       : "border-gray-200"
                   }`}
-                onClick={() => setSelectedImage(img)}
+                onClick={() => setSelectedImage(imgUrl)}
               >
-                <img
-                  key={index}
-                  src={img}
-                  alt={`Gallery ${index}`}
-                  className="object-contain w-full h-full"
-                  size="96px"
+              <img
+                  src={imgUrl}
+                  alt={`gallery-${idx}`}
+                  fill
+                  className="object-contain"
+                  sizes="96px"
                 />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Right: Product Info */}
+        {/* --- Info Section --- */}
         <div>
-          <h1 className="text-3xl font-bold mb-1">{product.name}</h1>
-          <p className="text-gray-400 mb-3">{product.brand}</p>
-          <p className="text-gray-200 mb-4">{product.description}</p>
+          <h1 className="text-2xl font-bold">{product.name}</h1>
+          <p className="text-gray-500 mb-2">{product.brand}</p>
 
-          {/* Price */}
-          <div className="mb-4">
-            <span className="text-2xl font-semibold text-green-600">
-              ₹{product.price.toLocaleString()}
-            </span>
-            <span className="text-gray-400 line-through ml-3">
-              ₹{product.mrp.toLocaleString()}
-            </span>
+          <div className="flex items-center gap-4 mb-4">
+            <p className="text-3xl font-semibold text-primary">
+              ₹{displayItem.price.toLocaleString()}
+            </p>
+            <p className="line-through text-gray-400">
+              ₹{displayItem.mrp.toLocaleString()}
+            </p>
           </div>
 
-          {/* Color Options */}
-          <div className="mb-5">
-            <p className="font-semibold mb-2">Color:</p>
+          <p className="mb-4">{displayItem.description}</p>
+
+          {/* --- Variant Selection --- */}
+          {/* --- Variant Selection --- */}
+          <div className="mb-6">
+            <h3 className="font-semibold mb-2">Available Colors:</h3>
             <div className="flex gap-2 flex-wrap">
-              {product.variants.map((variant) => (
+              {/* Default Variant Button */}
+              <button
+                onClick={() => setSelectedVariant(null)}
+                className={`btn btn-sm ${
+                  selectedVariant === null ? "btn-primary" : "btn-outline"
+                }`}
+              >
+                {product.color || "Default"}
+              </button>
+
+              {/* Actual Variants */}
+              {product.variants?.map((variant, idx) => (
                 <button
-                  key={variant.slug}
-                  onClick={() => handleColorSelect(variant.slug)}
-                  className={`px-4 py-2 rounded-lg border transition ${
-                    variant.color === selectedColor
-                      ? "border-blue-500 bg-blue-100 text-black"
-                      : "border-gray-300 hover:border-blue-300"
+                  key={idx}
+                  onClick={() => setSelectedVariant(variant)}
+                  className={`btn btn-sm ${
+                    selectedVariant?.color === variant.color
+                      ? "btn-primary"
+                      : "btn-outline"
                   }`}
                 >
                   {variant.color}
@@ -185,27 +148,23 @@ console.log(product);
             </div>
           </div>
 
-          {/* Storage Options */}
-          <div className="mb-5">
-            <p className="font-semibold mb-2">Storage:</p>
+          {/* --- Storage Options --- */}
+          <div className="mb-6">
+            <h3 className="font-semibold mb-2">Storage Options:</h3>
             <div className="flex gap-2 flex-wrap">
-              {product.storageOptions.map((option) => (
-                <button
-                  key={option.slug}
-                  onClick={() => handleStorageSelect(option.slug, option.storage)}
-                  className={`px-4 py-2 rounded-lg border transition ${
-                    option.storage === selectedStorage
-                      ? "border-blue-500 bg-blue-100"
-                      : "border-gray-300 hover:border-blue-300"
-                  }`}
+              {displayItem.storageOptions.map((opt, idx) => (
+                <div
+                  key={idx}
+                  className="badge badge-outline p-3 text-sm font-medium"
                 >
-                  {option.storage}
-                </button>
+                  {opt}
+                </div>
               ))}
             </div>
           </div>
 
-          {/* EMI Plans */}
+          {/* --- EMI Plans --- */}
+          {/* --- EMI Plans --- */}
           <div className="border-t pt-4 mt-6">
             <h3 className="font-semibold mb-3">EMI Plans:</h3>
 
@@ -213,7 +172,7 @@ console.log(product);
             <div className="space-y-2">
               {product.emiPlans.map((plan, idx) => {
                 const monthly = (
-                  (product.price * (1 + plan.interestRate / 100)) /
+                  (displayItem.price * (1 + plan.interestRate / 100)) /
                   plan.tenureMonths
                 ).toFixed(2);
 
@@ -240,7 +199,7 @@ console.log(product);
                       </p>
                     </div>
                     <button
-                      className={`btn btn-sm p-4 ${
+                      className={`btn btn-sm ${
                         plan.id === selectedPlan?.id
                           ? "btn-success"
                           : "btn-primary"
@@ -293,13 +252,13 @@ console.log(product);
                 {/* Calculations */}
                 {(() => {
                   const totalPayable = (
-                    product.price *
+                    displayItem.price *
                     (1 + selectedPlan.interestRate / 100)
                   ).toFixed(2);
                   const monthlyEMI = (
                     totalPayable / selectedPlan.tenureMonths
                   ).toFixed(2);
-                  const downPayment = (product.price * 0.1).toFixed(2); // 10% example
+                  const downPayment = (displayItem.price * 0.1).toFixed(2); // 10% example
 
                   return (
                     <>
@@ -329,6 +288,7 @@ console.log(product);
               </div>
             )}
           </div>
+
 
         </div>
       </div>
