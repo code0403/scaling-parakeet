@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body className="min-h-screen flex flex-col bg-base-100 text-base-content">
         <Providers>
         <Navbar />
