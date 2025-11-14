@@ -1,0 +1,426 @@
+[
+    {
+        "name": "Apple iPhone 16 Black",
+        "brand": "Apple",
+        "slug": "iphone-16-black",
+        "image": "https://m.media-amazon.com/images/I/61135j8fPJL._SX679_.jpg",
+        "imageGallery": [
+            "https://m.media-amazon.com/images/I/61jLiWWfKDL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/51UIlT-iiML._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/81MWQ-fpz8L._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/61mbw8GYY2L._SX679_.jpg"
+        ],
+        "color": "Black",
+        "RAM": [
+            "8 GB",
+            "12 GB"
+        ],
+        "storageOptions": [
+            "256 GB",
+            "512 GB",
+            "1 TB"
+        ],
+        "OperatingSystem": "iOS",
+        "mrp": 79900,
+        "price": 66900,
+        "category": "smartphones",
+        "description": "Flagship Apple iPhone 16 Pro with A-series chipset and pro camera setup.",
+        "variants": [
+            {
+                "name": "iphone-16 Ultramarine",
+                "slug": "iphone-16-ultramarine",
+                "color": "Ultramarine",
+                "mrp": 79900,
+                "price": 66900,
+                "image": "https://m.media-amazon.com/images/I/712SuRmHG4L._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/712SuRmHG4L._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/51g2H4pmpwL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/81PMoPfbWKL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/610Wp+uURFL._SX679_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "iOS",
+                "category": "smartphones",
+                "description": "Flagship Apple iPhone 16 Pro with A-series chipset and pro camera setup."
+            },
+            {
+                "name": "iphone-16 White",
+                "slug": "iphone-16-white",
+                "color": "White",
+                "mrp": 179900,
+                "price": 169900,
+                "image": "https://m.media-amazon.com/images/I/61d88xzrklL._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/61d88xzrklL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/51FVz2+X-9L._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/81XzDQHVXQL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/61j860Bp8XL._SX679_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "iOS",
+                "category": "smartphones",
+                "description": "Flagship Apple iPhone 16 Pro with A-series chipset and pro camera setup."
+            },
+            {
+                "name": "iphone-16 Pink",
+                "slug": "iphone-16-pink",
+                "color": "Pink",
+                "mrp": 179900,
+                "price": 169900,
+                "image": "https://m.media-amazon.com/images/I/61zwK7mmLtL._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/61mbw8GYY2L._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/51jIfJMu-hL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/81N8KKA5OJL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/61a84hB7hNL._SX679_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "iOS",
+                "category": "smartphones",
+                "description": "Flagship Apple iPhone 16 Pro with A-series chipset and pro camera setup."
+            }
+        ],
+        "emiPlans": [
+            {
+                "id": "iplan-iphone-0-6",
+                "tenureMonths": 6,
+                "interestRate": 0.0,
+                "cashback": 1500,
+                "fund": "SBI Bluechip"
+            },
+            {
+                "id": "iplan-iphone-10-12",
+                "tenureMonths": 12,
+                "interestRate": 10.5,
+                "cashback": 0,
+                "fund": "HNIF Growth"
+            },
+            {
+                "id": "iplan-iphone-8-9",
+                "tenureMonths": 9,
+                "interestRate": 7.5,
+                "cashback": 500,
+                "fund": "Axis LongTerm"
+            }
+        ]
+    },
+    {
+        "name": "Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI",
+        "brand": "Samsung",
+        "slug": "samsung-galaxy-s25-ultra-5g-smartphone-with-galaxy-ai",
+        "image": "https://m.media-amazon.com/images/I/71P85R392uL._SX679_.jpg",
+        "imageGallery": [
+            "https://m.media-amazon.com/images/I/71P85R392uL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71iRY9pUoVL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71pDQ+941HL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/71PrkZz2itL._SX679_.jpg"
+        ],
+        "color": "Titanium Silverblue",
+        "RAM": [
+            "8 GB",
+            "12 GB"
+        ],
+        "storageOptions": [
+            "256 GB",
+            "512 GB"
+        ],
+        "OperatingSystem": "Android 15.0",
+        "mrp": 141999,
+        "price": 119999,
+        "category": "smartphones",
+        "description": "Flagship Samsung Galaxy S25 Ultra 5G AI Smartphone with advanced camera and AI features.",
+        "variants": [
+            {
+                "name": "Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI",
+                "slug": "samsung-galaxy-s25-ultra-5g-smartphone-with-galaxy-ai",
+                "color": "Titanium Gray",
+                "mrp": 141999,
+                "price": 119999,
+                "image": "https://m.media-amazon.com/images/I/71rs4Aer71L._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/71rs4Aer71L._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71iRY9pUoVL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71pDQ+941HL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71PrkZz2itL._SX679_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "Android 15.0",
+                "category": "smartphones",
+                "description": "Flagship Samsung Galaxy S25 Ultra 5G AI Smartphone with advanced camera and AI features."
+            },
+            {
+                "name": "Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI",
+                "slug": "samsung-galaxy-s25-ultra-5g-smartphone-with-galaxy-ai",
+                "color": "Titanium Whitesilver",
+                "mrp": 141900,
+                "price": 119900,
+                "image": "https://m.media-amazon.com/images/I/71-d7XDbhIL._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/71-d7XDbhIL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71iRY9pUoVL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71pDQ+941HL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71PrkZz2itL._SX679_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "Android 15.0",
+                "category": "smartphones",
+                "description": "Flagship Samsung Galaxy S25 Ultra 5G AI Smartphone with advanced camera and AI features."
+            },
+            {
+                "name": "Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI",
+                "slug": "samsung-galaxy-s25-ultra-5g-smartphone-with-galaxy-ai",
+                "color": "Titanium Black",
+                "mrp": 117900,
+                "price": 113900,
+                "image": "https://m.media-amazon.com/images/I/71uqj6BKnRL._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/71uqj6BKnRL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71iRY9pUoVL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71pDQ+941HL._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/71PrkZz2itL._SX679_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "Android 15.0",
+                "category": "smartphones",
+                "description": "Flagship Samsung Galaxy S25 Ultra 5G AI Smartphone with advanced camera and AI features."
+            }
+        ],
+        "emiPlans": [
+            {
+                "id": "Samsung-Galaxy-S25-Ultra-5G-0-6",
+                "tenureMonths": 6,
+                "interestRate": 0.0,
+                "cashback": 1500,
+                "fund": "SBI Bluechip"
+            },
+            {
+                "id": "Samsung-Galaxy-S25-Ultra-5G-10-12",
+                "tenureMonths": 12,
+                "interestRate": 10.5,
+                "cashback": 0,
+                "fund": "HNIF Growth"
+            },
+            {
+                "id": "Samsung-Galaxy-S25-Ultra-5G-8-9",
+                "tenureMonths": 9,
+                "interestRate": 7.5,
+                "cashback": 500,
+                "fund": "Axis LongTerm"
+            }
+        ]
+    },
+    {
+        "name": "OnePlus 13 | Smarter with OnePlus AI",
+        "brand": "OnePlus",
+        "slug": "oneplus-13-smarter-with-oneplus-ai",
+        "image": "https://m.media-amazon.com/images/I/715k0WQtg9L._SX569_.jpg",
+        "imageGallery": [
+            "https://m.media-amazon.com/images/I/715k0WQtg9L._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/61A+bgJ2jmL._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/61kL-kPUl-L._SX569_.jpg",
+            "https://m.media-amazon.com/images/I/71764JNKQML._SX569_.jpg"
+        ],
+        "color": "Black Eclipse",
+        "RAM": [
+            "8 GB",
+            "12 GB"
+        ],
+        "storageOptions": [
+            "256 GB",
+            "512 GB"
+        ],
+        "OperatingSystem": "Android 15, OxygenOS",
+        "mrp": 63999,
+        "price": 54999,
+        "category": "smartphones",
+        "description": "Flagship OnePlus 13 Smartphone with advanced camera and AI features.",
+        "variants": [
+            {
+                "name": "OnePlus 13 | Smarter with OnePlus AI",
+                "slug": "oneplus-13-smarter-with-oneplus-ai",
+                "color": " Arctic Dawn",
+                "mrp": 63999,
+                "price": 54999,
+                "image": "https://m.media-amazon.com/images/I/61oir+alYlL._SX569_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/61oir+alYlL._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/616GelAX9NL._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/61kL-kPUl-L._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/71764JNKQML._SX569_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB"
+                ],
+                "OperatingSystem": "Android 15.0",
+                "category": "smartphones",
+                "description": "Flagship OnePlus 13 Smartphone with advanced camera and AI features."
+            },
+            {
+                "name": "OnePlus 13 | Smarter with OnePlus AI",
+                "slug": "oneplus-13-smarter-with-oneplus-ai",
+                "color": "Midnight Ocean",
+                "mrp": 63999,
+                "price": 54999,
+                "image": "https://m.media-amazon.com/images/I/71N4hshhfNL._SX569_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/71N4hshhfNL._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/611z5CM++VL._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/61kL-kPUl-L._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/71764JNKQML._SX569_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "Android 15, OxygenOS",
+                "category": "smartphones",
+                "description": "Flagship OnePlus 13 Smartphone with advanced camera and AI features."
+            }
+        ],
+        "emiPlans": [
+            {
+                "id": "OnePlus-13-0-6",
+                "tenureMonths": 6,
+                "interestRate": 0.0,
+                "cashback": 1500,
+                "fund": "SBI Bluechip"
+            },
+            {
+                "id": "OnePlus-13-10-12",
+                "tenureMonths": 12,
+                "interestRate": 10.5,
+                "cashback": 0,
+                "fund": "HNIF Growth"
+            },
+            {
+                "id": "OnePlus-13-8-9",
+                "tenureMonths": 9,
+                "interestRate": 7.5,
+                "cashback": 500,
+                "fund": "Axis LongTerm"
+            }
+        ]
+    },
+
+    {
+        "name": "Google Pixel 10 5G",
+        "brand": "Google",
+        "slug": "google-pixel-10-5g",
+        "image": "https://m.media-amazon.com/images/I/516HIUddM3L._SX679_.jpg",
+        "imageGallery": [
+            "https://m.media-amazon.com/images/I/516HIUddM3L._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/31s4WuqU8cL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/41Lewj+2FmL._SX679_.jpg",
+            "https://m.media-amazon.com/images/I/418gt1Fr+tL._SX679_.jpg"
+        ],
+        "color": "Obsidian",
+        "RAM": [
+            "8 GB",
+            "12 GB"
+        ],
+        "storageOptions": [
+            "256 GB",
+            "512 GB"
+        ],
+        "OperatingSystem": "Android 16",
+        "mrp": 69500,
+        "price": 64999,
+        "category": "smartphones",
+        "description": "Flagship Google Pixel 10 5G Smartphone with advanced camera and AI features.",
+        "variants": [
+            {
+                "name": "Google Pixel 10 5G",
+                "slug": "google-pixel-10-5g",
+                "color": "Indigo",
+                "mrp": 68500,
+                "price": 64999,
+                "image": "https://m.media-amazon.com/images/I/41CV2313l5L._SX679_.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/41CV2313l5L._SX679_.jpg",
+                    "https://m.media-amazon.com/images/I/616GelAX9NL._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/61kL-kPUl-L._SX569_.jpg",
+                    "https://m.media-amazon.com/images/I/71764JNKQML._SX569_.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB"
+                ],
+                "OperatingSystem": "Android 16",
+                "category": "smartphones",
+                "description": "Flagship Google Pixel 10 5G Smartphone with advanced camera and AI features."
+            },
+            {
+                "name": "Google Pixel 10 5G",
+                "slug": "google-pixel-10-5g",
+                "color": "Frost White",
+                "mrp": 69250,
+                "price": 66999,
+                "image": "https://m.media-amazon.com/images/I/315DonuUGZL.jpg",
+                "imageGallery": [
+                    "https://m.media-amazon.com/images/I/315DonuUGZL.jpg",
+                    "https://m.media-amazon.com/images/I/11nkv+xBrPL.jpg",
+                    "https://m.media-amazon.com/images/I/41ChUKFeMVL.jpg",
+                    "https://m.media-amazon.com/images/I/21xxTdM3GKL.jpg"
+                ],
+                "storageOptions": [
+                    "256 GB",
+                    "512 GB",
+                    "1 TB"
+                ],
+                "OperatingSystem": "Android 16",
+                "category": "smartphones",
+                "description": "Flagship Google Pixel 10 5G Smartphone with advanced camera and AI features."
+            }
+        ],
+        "emiPlans": [
+            {
+                "id": "Google-Pixel-0-6",
+                "tenureMonths": 6,
+                "interestRate": 0.0,
+                "cashback": 1500,
+                "fund": "SBI Bluechip"
+            },
+            {
+                "id": "Google-Pixel-10-12",
+                "tenureMonths": 12,
+                "interestRate": 10.5,
+                "cashback": 0,
+                "fund": "HNIF Growth"
+            },
+            {
+                "id": "Google-Pixel-8-9",
+                "tenureMonths": 9,
+                "interestRate": 7.5,
+                "cashback": 500,
+                "fund": "Axis LongTerm"
+            }
+        ]
+    }
+]
