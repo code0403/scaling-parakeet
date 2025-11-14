@@ -1,0 +1,13 @@
+{
+  "name": "mobilehub",
+  "version": "1.0.0",
+  "description": "A simple **full-stack web application** that displays products (like smartphones) with multiple EMI plans backed by mutual funds — similar to **Snapmint** style pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
